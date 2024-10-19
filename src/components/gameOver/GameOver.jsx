@@ -1,5 +1,5 @@
 function GameOver({winner, restart}) {
-    
+    console.log('Game Over component')
     return ( 
         <div id="game-over">
             <h2>Game Over!</h2>
