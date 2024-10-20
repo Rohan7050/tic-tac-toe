@@ -12,6 +12,7 @@ pipeline {
                     # Check if Node.js is installed
                     if ! command -v node > /dev/null 2>&1; then
                         echo "Node.js is not installed. Installing Node.js..."
+                        sudo apt install curl
                         curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
                         sudo apt-get install -y nodejs
                     else
