@@ -1,1 +1,1 @@
-echo 'Building on branch... $$AWS_ACCESS_KEY' && echo 'on branch... $TESTING'
+echo $$AWS_ACCESS_KEY && echo $TESTING
