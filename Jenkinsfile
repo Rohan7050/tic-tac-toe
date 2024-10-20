@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building on branch...'
+                echo 'Building on branch... $$AWS_ACCESS_KEY'
             }
         }
     }
