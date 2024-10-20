@@ -1,10 +1,6 @@
 pipeline {
     agent any
     stages {
-        environment {
-            BUILD_DIR = 'dist' // The React build directory
-            ZIP_FILE = 'dist.zip' // The file name for the zipped build directory
-        }
         stage('Checkout') {
             steps {
                 // Checkout code from the Git repository
@@ -28,14 +24,7 @@ pipeline {
         stage('Zip Build Directory') {
             steps {
                 // Zip the build directory
-                sh '''
-                if [ -d "${BUILD_DIR}" ]; then
-                    zip -r ${ZIP_FILE} ${BUILD_DIR}
-                else
-                    echo "Error: Build directory does not exist."
-                    exit 1
-                fi
-                '''
+                sh 'zip -r $dist.zip dist'
             }
         }
         stage('upload to s3') {
