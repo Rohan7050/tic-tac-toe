@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools {
-        nodejs "NodeJS_20" // The name configured in Global Tool Configuration
-    }
+    // tools {
+    //     nodejs "NodeJS_20" // The name configured in Global Tool Configuration
+    // }
     stages {
         stage('Install Node.js') {
             steps {
