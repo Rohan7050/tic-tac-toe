@@ -1,1 +1,1 @@
-echo $$AWS_ACCESS_KEY && echo $TESTING
+echo $AWS_ACCESS_KEY && echo $TESTING
