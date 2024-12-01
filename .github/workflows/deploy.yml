@@ -38,8 +38,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
+      - name: Create zip
+        run: zip -r dist-files.zip .
       - name: Show ls
         run: |
           echo "$GITHUB_WORKSPACE"
           echo "//////"
-          ls 
+          ls
+      
