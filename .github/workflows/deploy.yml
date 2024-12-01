@@ -40,11 +40,6 @@ jobs:
           name: dist-files
       - name: Create zip
         run: zip -r dist-files.zip .
-      - name: Show ls
-        run: |
-          echo "$GITHUB_WORKSPACE"
-          echo "//////"
-          ls
       - name: Upload Build to S3 bucket
         run: aws s3 cp dist-files.zip s3://${{secrets.S3_BUCKET}}/${{ github.repository }}/
       
