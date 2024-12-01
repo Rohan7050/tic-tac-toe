@@ -45,4 +45,6 @@ jobs:
           echo "$GITHUB_WORKSPACE"
           echo "//////"
           ls
+      - name: Upload Build to S3 bucket
+        run: aws s3 cp dist-files.zip s3://${{secrets.S3_BUCKET}}/${{ github.repository }}/
       
