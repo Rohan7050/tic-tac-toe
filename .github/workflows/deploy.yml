@@ -26,6 +26,7 @@ jobs:
           name: dist-files
           path: dist
   upload-on-s3:
+    needs: build
     runs-on: ubuntu-latest
     env: 
       AWS_ACCESS_KEY_ID : ${{secrets.AWS_ACCESS_KEY_ID}}
